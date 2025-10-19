@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>13.0</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RootNamespace>MarcusMedina.Fluent.Algebra</RootNamespace>
+
+    <!-- NuGet Package Metadata -->
+    <PackageId>MarcusMedina.Fluent.Algebra</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Marcus Medina</Authors>
+    <Company>MarcusMedina</Company>
+    <Description>Fluent API for algebraic expressions, symbolic math, and equation solving in C#</Description>
+    <Copyright>Copyright © Marcus Medina 2019-2025</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/MarcusMedina/Fluent.Algebra</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MarcusMedina/Fluent.Algebra</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>algebra;math;symbolic;fluent;expressions;equations</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
