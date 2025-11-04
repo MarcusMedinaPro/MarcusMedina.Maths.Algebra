@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\examples\\BasicUsage\\BasicUsage.csproj": {}
+    "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\examples\\BasicUsage\\BasicUsage.csproj": {}
   },
   "projects": {
-    "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\examples\\BasicUsage\\BasicUsage.csproj": {
-      "version": "1.0.0",
+    "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\csharp\\src\\MarcusMedina.Fluent.Algebra\\MarcusMedina.Fluent.Algebra.csproj": {
+      "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\examples\\BasicUsage\\BasicUsage.csproj",
-        "projectName": "BasicUsage",
-        "projectPath": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\examples\\BasicUsage\\BasicUsage.csproj",
+        "projectUniqueName": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\csharp\\src\\MarcusMedina.Fluent.Algebra\\MarcusMedina.Fluent.Algebra.csproj",
+        "projectName": "MarcusMedina.Fluent.Algebra",
+        "projectPath": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\csharp\\src\\MarcusMedina.Fluent.Algebra\\MarcusMedina.Fluent.Algebra.csproj",
         "packagesPath": "C:\\Users\\jun_2\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\examples\\BasicUsage\\obj\\",
+        "outputPath": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\csharp\\src\\MarcusMedina.Fluent.Algebra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,11 +31,7 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {
-              "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\src\\Fluent.Algebra.csproj": {
-                "projectPath": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\src\\Fluent.Algebra.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -73,14 +69,14 @@
         }
       }
     },
-    "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\src\\Fluent.Algebra.csproj": {
-      "version": "0.1.0",
+    "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\examples\\BasicUsage\\BasicUsage.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\src\\Fluent.Algebra.csproj",
-        "projectName": "MarcusMedina.Fluent.Algebra",
-        "projectPath": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\src\\Fluent.Algebra.csproj",
+        "projectUniqueName": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\examples\\BasicUsage\\BasicUsage.csproj",
+        "projectName": "BasicUsage",
+        "projectPath": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\examples\\BasicUsage\\BasicUsage.csproj",
         "packagesPath": "C:\\Users\\jun_2\\.nuget\\packages\\",
-        "outputPath": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\src\\obj\\",
+        "outputPath": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\examples\\BasicUsage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,7 +96,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\csharp\\src\\MarcusMedina.Fluent.Algebra\\MarcusMedina.Fluent.Algebra.csproj": {
+                "projectPath": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\csharp\\src\\MarcusMedina.Fluent.Algebra\\MarcusMedina.Fluent.Algebra.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

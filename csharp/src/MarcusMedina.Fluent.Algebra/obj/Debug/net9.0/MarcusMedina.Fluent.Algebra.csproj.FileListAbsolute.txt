@@ -1,0 +1,14 @@
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\bin\Debug\net9.0\MarcusMedina.Fluent.Algebra.deps.json
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\bin\Debug\net9.0\MarcusMedina.Fluent.Algebra.dll
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\bin\Debug\net9.0\MarcusMedina.Fluent.Algebra.pdb
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\bin\Debug\net9.0\MarcusMedina.Fluent.Algebra.xml
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.AssemblyInfoInputs.cache
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.AssemblyInfo.cs
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.csproj.CoreCompileInputs.cache
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.sourcelink.json
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.dll
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\refint\MarcusMedina.Fluent.Algebra.dll
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.xml
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\MarcusMedina.Fluent.Algebra.pdb
+C:\Git\MarcusMedina\NuGet\FluentBuilders.Algebra\csharp\src\MarcusMedina.Fluent.Algebra\obj\Debug\net9.0\ref\MarcusMedina.Fluent.Algebra.dll

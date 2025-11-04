@@ -1,0 +1,621 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarcusMedina.Fluent.Algebra</name>
+    </assembly>
+    <members>
+        <member name="T:MarcusMedina.Fluent.Algebra.Builders.Algebra">
+            <summary>
+            Fluent builder for algebraic expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Constant(System.Double)">
+            <summary>
+            Creates a constant expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Variable(System.String)">
+            <summary>
+            Creates a variable expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Var(System.String)">
+            <summary>
+            Creates a variable expression (shorthand)
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Builders.Algebra.X">
+            <summary>
+            Common variable: x
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Builders.Algebra.Y">
+            <summary>
+            Common variable: y
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Builders.Algebra.Z">
+            <summary>
+            Common variable: z
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Add(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates an addition expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Subtract(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a subtraction expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Multiply(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a multiplication expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Divide(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a division expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Power(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a power expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Sqrt(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a square root expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Sin(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a sine expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Cos(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a cosine expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Ln(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a natural logarithm expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Abs(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates an absolute value expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Builders.Algebra.Negate(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a negation expression
+            </summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Evaluators.AlgebraEvaluator">
+            <summary>
+            Utility class for evaluating algebraic expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Evaluators.AlgebraEvaluator.Evaluate(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            Evaluates an expression with the given variables
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Evaluators.AlgebraEvaluator.Evaluate(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.String,System.Double)">
+            <summary>
+            Evaluates an expression with a single variable
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Evaluators.AlgebraEvaluator.EvaluateRange(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.String,System.Double,System.Double,System.Int32)">
+            <summary>
+            Evaluates an expression at multiple points
+            </summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression">
+            <summary>
+            Represents a binary operation (e.g., addition, multiplication) in an algebraic expression.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Left">
+            <summary>
+            Gets the left operand of the binary operation.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Right">
+            <summary>
+            Gets the right operand of the binary operation.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Operator">
+            <summary>
+            Gets the binary operator (Add, Subtract, Multiply, Divide, Power).
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.#ctor(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression"/> class.
+            </summary>
+            <param name="left">The left operand expression.</param>
+            <param name="op">The binary operator to apply.</param>
+            <param name="right">The right operand expression.</param>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.ToLaTeX">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Substitute(System.String,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Substitute(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.BinaryExpression.Simplify">
+            <inheritdoc/>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator">
+            <summary>
+            Binary operators for algebraic expressions.
+            </summary>
+            <summary>
+            Binary operators for algebraic expressions.
+            </summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator.Add">
+            <summary>Addition operator (+)</summary>
+            <summary>Addition operator (+)</summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator.Subtract">
+            <summary>Subtraction operator (-)</summary>
+            <summary>Subtraction operator (-)</summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator.Multiply">
+            <summary>Multiplication operator (*)</summary>
+            <summary>Multiplication operator (*)</summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator.Divide">
+            <summary>Division operator (/)</summary>
+            <summary>Division operator (/)</summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.BinaryOperator.Power">
+            <summary>Exponentiation operator (^)</summary>
+            <summary>Exponentiation operator (^)</summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression">
+            <summary>
+            Represents a constant numeric value in an algebraic expression.
+            Use this to represent numbers like 2, 3.14, or -7 in symbolic math.
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.#ctor(System.Double)">
+            <summary>
+            Represents a constant numeric value in an algebraic expression.
+            Use this to represent numbers like 2, 3.14, or -7 in symbolic math.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.Value">
+            <summary>
+            Gets the numeric value of the constant.
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            Evaluates the constant expression. Always returns the stored value, regardless of variables.
+            </summary>
+            <param name="variables">Variable substitutions (ignored for constants).</param>
+            <returns>The numeric value of the constant.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.ToString">
+            <summary>
+            Returns a string representation of the constant, suitable for code or math output.
+            </summary>
+            <returns>The value as a string.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.ToLaTeX">
+            <summary>
+            Returns a LaTeX representation of the constant for mathematical typesetting.
+            </summary>
+            <returns>The value as a LaTeX string.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.Substitute(System.String,System.Double)">
+            <summary>
+            Substitutes a variable with a value. For constants, this returns itself (no effect).
+            </summary>
+            <param name="variable">The variable name to substitute (ignored).</param>
+            <param name="value">The value to substitute (ignored).</param>
+            <returns>This constant expression.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.Substitute(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Substitutes a variable with another expression. For constants, this returns itself (no effect).
+            </summary>
+            <param name="variable">The variable name to substitute (ignored).</param>
+            <param name="expression">The expression to substitute (ignored).</param>
+            <returns>This constant expression.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.Simplify">
+            <summary>
+            Simplifies the constant expression. For constants, this returns itself (already simplest form).
+            </summary>
+            <returns>This constant expression.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.op_Implicit(System.Double)~MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression">
+            <summary>
+            Implicitly converts a double value to a <see cref="T:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression"/>.
+            This allows you to use numbers directly in algebraic expressions.
+            </summary>
+            <param name="value">The double value to convert.</param>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression.op_Implicit(System.Int32)~MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression">
+            <summary>
+            Implicitly converts an int value to a <see cref="T:MarcusMedina.Fluent.Algebra.Expressions.ConstantExpression"/>.
+            </summary>
+            <param name="value">The int value to convert.</param>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression">
+            <summary>
+            Represents a mathematical function call (such as sin, cos, sqrt) in an algebraic expression.
+            This allows you to build and evaluate expressions like sin(x), sqrt(2), or log(y).
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.#ctor(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Represents a mathematical function call (such as sin, cos, sqrt) in an algebraic expression.
+            This allows you to build and evaluate expressions like sin(x), sqrt(2), or log(y).
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.FunctionName">
+            <summary>
+            Gets the name of the mathematical function (e.g., 'sin', 'cos', 'sqrt').
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.Argument">
+            <summary>
+            Gets the argument (input) to the function. For example, in sin(x), the argument is x.
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            Evaluates the function expression by evaluating its argument and applying the function.
+            </summary>
+            <param name="variables">Variable substitutions for evaluation.</param>
+            <returns>The numeric result of the function applied to the argument.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.ToString">
+            <summary>
+            Returns a string representation of the function expression, such as 'sin(x)'.
+            </summary>
+            <returns>The function as a string.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.ToLaTeX">
+            <summary>
+            Returns a LaTeX representation of the function expression for mathematical typesetting.
+            </summary>
+            <returns>The function as a LaTeX string.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.Substitute(System.String,System.Double)">
+            <summary>
+            Substitutes a variable with a value in the argument of the function.
+            </summary>
+            <param name="variable">The variable name to substitute.</param>
+            <param name="value">The value to substitute.</param>
+            <returns>A new function expression with the substitution applied.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.Substitute(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Substitutes a variable with another expression in the argument of the function.
+            </summary>
+            <param name="variable">The variable name to substitute.</param>
+            <param name="expression">The expression to substitute.</param>
+            <returns>A new function expression with the substitution applied.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.FunctionExpression.Simplify">
+            <summary>
+            Simplifies the function expression by simplifying its argument and evaluating if possible.
+            </summary>
+            <returns>A simplified function expression or a constant if fully evaluable.</returns>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression">
+            <summary>
+            Represents a unary operation (such as negation or absolute value) in an algebraic expression.
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.#ctor(MarcusMedina.Fluent.Algebra.Expressions.UnaryOperator,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Represents a unary operation (such as negation or absolute value) in an algebraic expression.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.Operand">
+            <summary>
+            Gets the operand expression that the operator is applied to.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.Operator">
+            <summary>
+            Gets the unary operator (Negate, Abs).
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.ToLaTeX">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.Substitute(System.String,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.Substitute(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <inheritdoc/>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression.Simplify">
+            <inheritdoc/>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.UnaryOperator">
+            <summary>
+            Specifies the type of unary operation to perform in a <see cref="T:MarcusMedina.Fluent.Algebra.Expressions.UnaryExpression"/>.
+            </summary>
+            <summary>
+            Unary operators for algebraic expressions.
+            </summary>
+            <summary>
+            Unary operators for algebraic expressions.
+            </summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.UnaryOperator.Negate">
+            <summary>
+            Negates the operand (changes its sign). For example, -x.
+            </summary>
+            <summary>Negation operator (-x)</summary>
+            <summary>Negation operator (-x)</summary>
+        </member>
+        <member name="F:MarcusMedina.Fluent.Algebra.Expressions.UnaryOperator.Abs">
+            <summary>
+            Takes the absolute value of the operand. For example, |x|.
+            </summary>
+            <summary>Absolute value operator (|x|)</summary>
+            <summary>Absolute value operator (|x|)</summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression">
+            <summary>
+            Represents a variable in an algebraic expression, such as x, y, or z.
+            Variables are placeholders for values that can be substituted or evaluated.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.Name">
+            <summary>
+            Gets the name of the variable (e.g., 'x', 'y', 'z').
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression"/> class with the specified variable name.
+            </summary>
+            <param name="name">The name of the variable.</param>
+            <exception cref="T:System.ArgumentException">Thrown if the variable name is empty or whitespace.</exception>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            Evaluates the variable expression by looking up its value in the provided dictionary.
+            </summary>
+            <param name="variables">A dictionary of variable names and their values.</param>
+            <returns>The value of the variable.</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if the variable is not defined in the dictionary.</exception>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.ToString">
+            <summary>
+            Returns the variable name as a string.
+            </summary>
+            <returns>The variable name.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.ToLaTeX">
+            <summary>
+            Returns the variable name as a LaTeX string.
+            </summary>
+            <returns>The variable name for LaTeX output.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.Substitute(System.String,System.Double)">
+            <summary>
+            Substitutes the variable with a constant value if the name matches; otherwise returns itself.
+            </summary>
+            <param name="variable">The variable name to substitute.</param>
+            <param name="value">The value to substitute.</param>
+            <returns>A constant expression if the name matches, otherwise this variable expression.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.Substitute(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Substitutes the variable with another expression if the name matches; otherwise returns itself.
+            </summary>
+            <param name="variable">The variable name to substitute.</param>
+            <param name="expression">The expression to substitute.</param>
+            <returns>The substituted expression or this variable expression.</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Expressions.VariableExpression.Simplify">
+            <summary>
+            Simplifies the variable expression. For variables, this returns itself.
+            </summary>
+            <returns>This variable expression.</returns>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions">
+            <summary>
+            Extension methods for fluent algebraic operations
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Add(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Adds two expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Add(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.Double)">
+            <summary>
+            Adds a constant to an expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Subtract(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Subtracts two expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Subtract(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.Double)">
+            <summary>
+            Subtracts a constant from an expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Multiply(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Multiplies two expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Multiply(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.Double)">
+            <summary>
+            Multiplies an expression by a constant
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Divide(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Divides two expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Divide(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.Double)">
+            <summary>
+            Divides an expression by a constant
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Power(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Raises an expression to a power
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Power(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression,System.Double)">
+            <summary>
+            Raises an expression to a constant power
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Square(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Squares an expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Extensions.AlgebraExtensions.Negate(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Negates an expression
+            </summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Formatters.LaTeXFormatter">
+            <summary>
+            Formats expressions as LaTeX notation
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Formatters.LaTeXFormatter.Format(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Converts expression to LaTeX representation
+            </summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Formatters.StringFormatter">
+            <summary>
+            Formats expressions as standard mathematical notation
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Formatters.StringFormatter.Format(MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Converts expression to string representation
+            </summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression">
+            <summary>
+            Base interface for all algebraic expressions
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression.Evaluate(System.Collections.Generic.Dictionary{System.String,System.Double})">
+            <summary>
+            Evaluates the expression with given variable substitutions
+            </summary>
+            <param name="variables">Variable name-value pairs</param>
+            <returns>Numeric result</returns>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression.ToString">
+            <summary>
+            Returns a string representation of the expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression.ToLaTeX">
+            <summary>
+            Returns LaTeX representation of the expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression.Substitute(System.String,System.Double)">
+            <summary>
+            Creates a copy of this expression with a variable substituted
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression.Substitute(System.String,MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression)">
+            <summary>
+            Creates a copy of this expression with a variable substituted by another expression
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Interfaces.IAlgebraExpression.Simplify">
+            <summary>
+            Simplifies the expression
+            </summary>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Matrix.FluentMatrix">
+            <summary>
+            Represents a mathematical matrix for algebraic operations.
+            This class is a placeholder for future matrix functionality.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Matrix.FluentMatrix.Rows">
+            <summary>
+            Gets the number of rows in the matrix.
+            </summary>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Matrix.FluentMatrix.Columns">
+            <summary>
+            Gets the number of columns in the matrix.
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Matrix.FluentMatrix.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new matrix with the specified number of rows and columns.
+            All elements are initialized to zero.
+            </summary>
+            <param name="rows">The number of rows.</param>
+            <param name="columns">The number of columns.</param>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Matrix.FluentMatrix.#ctor(System.Double[0:,0:])">
+            <summary>
+            Initializes a new matrix with the specified data array.
+            </summary>
+            <param name="data">A 2D array of doubles representing the matrix elements.</param>
+        </member>
+        <member name="P:MarcusMedina.Fluent.Algebra.Matrix.FluentMatrix.Item(System.Int32,System.Int32)">
+            <summary>
+            Gets or sets the value at the specified row and column in the matrix.
+            </summary>
+            <param name="row">The row index (zero-based).</param>
+            <param name="col">The column index (zero-based).</param>
+            <returns>The value at the specified position.</returns>
+        </member>
+        <member name="T:MarcusMedina.Fluent.Algebra.Parsers.AlgebraParser">
+            <summary>
+            Parses mathematical expressions from strings (placeholder for future implementation)
+            </summary>
+        </member>
+        <member name="M:MarcusMedina.Fluent.Algebra.Parsers.AlgebraParser.Parse(System.String)">
+            <summary>
+            Parses a string into an algebraic expression
+            </summary>
+            <param name="expression">Mathematical expression string (e.g., "3*(x+2)^2")</param>
+            <returns>Parsed expression tree</returns>
+        </member>
+    </members>
+</doc>

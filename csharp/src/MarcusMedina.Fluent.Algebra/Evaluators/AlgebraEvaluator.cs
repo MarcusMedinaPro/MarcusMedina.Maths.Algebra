@@ -11,17 +11,13 @@ public static class AlgebraEvaluator
     /// Evaluates an expression with the given variables
     /// </summary>
     public static double Evaluate(this IAlgebraExpression expression, Dictionary<string, double>? variables = null)
-    {
-        return expression.Evaluate(variables);
-    }
+        => expression.Evaluate(variables);
 
     /// <summary>
     /// Evaluates an expression with a single variable
     /// </summary>
     public static double Evaluate(this IAlgebraExpression expression, string variable, double value)
-    {
-        return expression.Evaluate(new Dictionary<string, double> { { variable, value } });
-    }
+        => expression.Evaluate(new Dictionary<string, double> { { variable, value } });
 
     /// <summary>
     /// Evaluates an expression at multiple points
@@ -37,7 +33,7 @@ public static class AlgebraEvaluator
 
         for (var i = 0; i < steps; i++)
         {
-            var value = start + i * stepSize;
+            var value = start + (i * stepSize);
             yield return expression.Evaluate(variable, value);
         }
     }

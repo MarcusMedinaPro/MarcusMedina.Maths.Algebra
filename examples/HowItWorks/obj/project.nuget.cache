@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j4oJ5ln7Cl4=",
+  "dgSpecHash": "zm126u9Nv9o=",
   "success": true,
-  "projectFilePath": "C:\\Git\\MarcusMedina\\NuGet\\Fluent.Algebra\\examples\\HowItWorks\\HowItWorks.csproj",
+  "projectFilePath": "C:\\Git\\MarcusMedina\\NuGet\\FluentBuilders.Algebra\\examples\\HowItWorks\\HowItWorks.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

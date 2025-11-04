@@ -8,8 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "HowItWorks/1.0.0": {
         "dependencies": {
-          "MarcusMedina.Fluent.Algebra": "0.1.0",
-          "Fluent.Algebra": "0.1.0.0"
+          "MarcusMedina.Fluent.Algebra": "0.1.0"
         },
         "runtime": {
           "HowItWorks.dll": {}
@@ -17,15 +16,7 @@
       },
       "MarcusMedina.Fluent.Algebra/0.1.0": {
         "runtime": {
-          "Fluent.Algebra.dll": {
-            "assemblyVersion": "0.1.0.0",
-            "fileVersion": "0.1.0.0"
-          }
-        }
-      },
-      "Fluent.Algebra/0.1.0.0": {
-        "runtime": {
-          "Fluent.Algebra.dll": {
+          "MarcusMedina.Fluent.Algebra.dll": {
             "assemblyVersion": "0.1.0.0",
             "fileVersion": "0.1.0.0"
           }
@@ -41,11 +32,6 @@
     },
     "MarcusMedina.Fluent.Algebra/0.1.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Fluent.Algebra/0.1.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

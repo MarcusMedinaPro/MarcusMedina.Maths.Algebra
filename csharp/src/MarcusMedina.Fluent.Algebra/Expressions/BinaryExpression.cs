@@ -3,26 +3,39 @@ namespace MarcusMedina.Fluent.Algebra.Expressions;
 using MarcusMedina.Fluent.Algebra.Interfaces;
 
 /// <summary>
-/// Represents a binary operation (e.g., addition, multiplication)
+/// Represents a binary operation (e.g., addition, multiplication) in an algebraic expression.
 /// </summary>
 public sealed class BinaryExpression : IAlgebraExpression
 {
+    /// <summary>
+    /// Gets the left operand of the binary operation.
+    /// </summary>
     public IAlgebraExpression Left { get; }
+
+    /// <summary>
+    /// Gets the right operand of the binary operation.
+    /// </summary>
     public IAlgebraExpression Right { get; }
+
+    /// <summary>
+    /// Gets the binary operator (Add, Subtract, Multiply, Divide, Power).
+    /// </summary>
     public BinaryOperator Operator { get; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BinaryExpression"/> class.
+    /// </summary>
+    /// <param name="left">The left operand expression.</param>
+    /// <param name="op">The binary operator to apply.</param>
+    /// <param name="right">The right operand expression.</param>
     public BinaryExpression(IAlgebraExpression left, BinaryOperator op, IAlgebraExpression right)
-    {
-        Left = left;
-        Operator = op;
-        Right = right;
-    }
+        => (Left, Operator, Right) = (left, op, right);
 
+    /// <inheritdoc/>
     public double Evaluate(Dictionary<string, double>? variables = null)
     {
         var leftVal = Left.Evaluate(variables);
         var rightVal = Right.Evaluate(variables);
-
         return Operator switch
         {
             BinaryOperator.Add => leftVal + rightVal,
@@ -34,6 +47,7 @@ public sealed class BinaryExpression : IAlgebraExpression
         };
     }
 
+    /// <inheritdoc/>
     public override string ToString()
     {
         var op = Operator switch
@@ -45,46 +59,43 @@ public sealed class BinaryExpression : IAlgebraExpression
             BinaryOperator.Power => "^",
             _ => "?"
         };
-
         return $"({Left} {op} {Right})";
     }
 
+    /// <inheritdoc/>
     public string ToLaTeX()
-    {
-        return Operator switch
+        => Operator switch
         {
             BinaryOperator.Divide => $@"\frac{{{Left.ToLaTeX()}}}{{{Right.ToLaTeX()}}}",
             BinaryOperator.Power => $"{{{Left.ToLaTeX()}}}^{{{Right.ToLaTeX()}}}",
             _ => $"({Left.ToLaTeX()} {GetLatexOperator()} {Right.ToLaTeX()})"
         };
-    }
 
     private string GetLatexOperator() => Operator switch
     {
         BinaryOperator.Add => "+",
         BinaryOperator.Subtract => "-",
         BinaryOperator.Multiply => @"\cdot",
-        _ => "?"
+        _ => "?",
     };
 
+    /// <inheritdoc/>
     public IAlgebraExpression Substitute(string variable, double value)
-    {
-        return new BinaryExpression(
+        => new BinaryExpression(
             Left.Substitute(variable, value),
             Operator,
             Right.Substitute(variable, value)
         );
-    }
 
+    /// <inheritdoc/>
     public IAlgebraExpression Substitute(string variable, IAlgebraExpression expression)
-    {
-        return new BinaryExpression(
+        => new BinaryExpression(
             Left.Substitute(variable, expression),
             Operator,
             Right.Substitute(variable, expression)
         );
-    }
 
+    /// <inheritdoc/>
     public IAlgebraExpression Simplify()
     {
         var left = Left.Simplify();
@@ -101,16 +112,38 @@ public sealed class BinaryExpression : IAlgebraExpression
         // Identity rules
         if (right is ConstantExpression rightC)
         {
-            if (Operator == BinaryOperator.Add && rightC.Value == 0) return left;
-            if (Operator == BinaryOperator.Multiply && rightC.Value == 1) return left;
-            if (Operator == BinaryOperator.Multiply && rightC.Value == 0) return new ConstantExpression(0);
+            if (Operator == BinaryOperator.Add && rightC.Value == 0)
+            {
+                return left;
+            }
+
+            if (Operator == BinaryOperator.Multiply && rightC.Value == 1)
+            {
+                return left;
+            }
+
+            if (Operator == BinaryOperator.Multiply && rightC.Value == 0)
+            {
+                return new ConstantExpression(0);
+            }
         }
 
         if (left is ConstantExpression leftC)
         {
-            if (Operator == BinaryOperator.Add && leftC.Value == 0) return right;
-            if (Operator == BinaryOperator.Multiply && leftC.Value == 1) return right;
-            if (Operator == BinaryOperator.Multiply && leftC.Value == 0) return new ConstantExpression(0);
+            if (Operator == BinaryOperator.Add && leftC.Value == 0)
+            {
+                return right;
+            }
+
+            if (Operator == BinaryOperator.Multiply && leftC.Value == 1)
+            {
+                return right;
+            }
+
+            if (Operator == BinaryOperator.Multiply && leftC.Value == 0)
+            {
+                return new ConstantExpression(0);
+            }
         }
 
         return new BinaryExpression(left, Operator, right);
@@ -118,13 +151,26 @@ public sealed class BinaryExpression : IAlgebraExpression
 }
 
 /// <summary>
-/// Binary operators
+/// Binary operators for algebraic expressions.
+/// </summary>
+/// <summary>
+/// Binary operators for algebraic expressions.
 /// </summary>
 public enum BinaryOperator
 {
+    /// <summary>Addition operator (+)</summary>
+    /// <summary>Addition operator (+)</summary>
     Add,
+    /// <summary>Subtraction operator (-)</summary>
+    /// <summary>Subtraction operator (-)</summary>
     Subtract,
+    /// <summary>Multiplication operator (*)</summary>
+    /// <summary>Multiplication operator (*)</summary>
     Multiply,
+    /// <summary>Division operator (/)</summary>
+    /// <summary>Division operator (/)</summary>
     Divide,
+    /// <summary>Exponentiation operator (^)</summary>
+    /// <summary>Exponentiation operator (^)</summary>
     Power
 }
