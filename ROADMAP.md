@@ -790,6 +790,16 @@ Expr expr = "(x+2)^2/3";
 
 ---
 
+#### Static Variable Shortcuts
+- [ ] Generate `Vars` static class with A-Z properties
+- [ ] Add common subscripted variables (X1, X2, Y1, Y2, etc.)
+- [ ] Add common Greek letters (Alpha, Beta, Theta, etc.)
+- [ ] Document usage with `using static`
+
+**Priority:** 🟢 LOW (nice to have)
+
+---
+
 #### Math Functions
 - [ ] Add more trig functions (tan, cot, sec, csc)
 - [ ] Add inverse trig (asin, acos, atan)
