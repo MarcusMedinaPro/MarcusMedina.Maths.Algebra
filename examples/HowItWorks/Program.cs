@@ -1,7 +1,7 @@
-﻿using MarcusMedina.Fluent.Algebra.Builders;
-using MarcusMedina.Fluent.Algebra.Extensions;
-using MarcusMedina.Fluent.Algebra.Expressions;
-using MarcusMedina.Fluent.Algebra.Evaluators;
+﻿using MarcusMedina.Fluent.Maths.Algebra.Builders;
+using MarcusMedina.Fluent.Maths.Algebra.Extensions;
+using MarcusMedina.Fluent.Maths.Algebra.Expressions;
+using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 

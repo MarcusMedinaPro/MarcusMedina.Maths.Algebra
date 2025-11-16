@@ -1,5 +1,5 @@
-using MarcusMedina.Fluent.Algebra.Builders;
-using MarcusMedina.Fluent.Algebra.Extensions;
+using MarcusMedina.Fluent.Maths.Algebra.Builders;
+using MarcusMedina.Fluent.Maths.Algebra.Extensions;
 
 // UTF-8 Encoding for console
 Console.OutputEncoding = System.Text.Encoding.UTF8;

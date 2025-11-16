@@ -334,7 +334,7 @@ refactor: improve expression tree traversal
 
 - **GitHub Discussions**: General questions and ideas
 - **GitHub Issues**: Bugs and feature requests
-- **Email**: marcus@marcusmedina.pro (for sensitive matters)
+- **Email**: hello@marcusmedina.pro (for sensitive matters)
 
 ---
 
