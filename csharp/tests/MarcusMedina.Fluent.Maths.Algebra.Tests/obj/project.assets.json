@@ -990,11 +990,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj",
+      "projectUniqueName": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj",
       "projectName": "MarcusMedina.Fluent.Maths.Algebra.Tests",
-      "projectPath": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj",
+      "projectPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj",
       "packagesPath": "/home/jun_2/.nuget/packages/",
-      "outputPath": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/obj/",
+      "outputPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/jun_2/.nuget/NuGet/NuGet.Config"
@@ -1009,8 +1009,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj": {
-              "projectPath": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj"
+            "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj": {
+              "projectPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj"
             }
           }
         }

@@ -1,0 +1,14 @@
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/bin/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.deps.json
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/bin/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.dll
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/bin/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.pdb
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/bin/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.xml
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.AssemblyInfoInputs.cache
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.AssemblyInfo.cs
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.csproj.CoreCompileInputs.cache
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.sourcelink.json
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.dll
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/refint/MarcusMedina.Fluent.Maths.Algebra.dll
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.xml
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/MarcusMedina.Fluent.Maths.Algebra.pdb
+/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/Release/net10.0/ref/MarcusMedina.Fluent.Maths.Algebra.dll

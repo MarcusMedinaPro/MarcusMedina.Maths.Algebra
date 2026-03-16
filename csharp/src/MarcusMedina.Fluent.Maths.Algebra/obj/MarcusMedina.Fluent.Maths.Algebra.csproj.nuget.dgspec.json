@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj": {}
+    "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj": {}
   },
   "projects": {
-    "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj": {
+    "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj": {
       "version": "0.2.0",
       "restore": {
-        "projectUniqueName": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
+        "projectUniqueName": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
         "projectName": "MarcusMedina.Fluent.Maths.Algebra",
-        "projectPath": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
+        "projectPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
         "packagesPath": "/home/jun_2/.nuget/packages/",
-        "outputPath": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/",
+        "outputPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/jun_2/.nuget/NuGet/NuGet.Config"

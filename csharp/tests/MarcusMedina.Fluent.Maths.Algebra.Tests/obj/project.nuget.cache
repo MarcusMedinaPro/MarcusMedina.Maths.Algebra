@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9g15NSYD5Zk=",
+  "dgSpecHash": "3X27+aYWBUE=",
   "success": true,
-  "projectFilePath": "/mnt/c/git/MarcusMedina/NuGet/_WIP_/Mathematics/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj",
+  "projectFilePath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj",
   "expectedPackageFiles": [
     "/home/jun_2/.nuget/packages/fluentassertions/6.12.2/fluentassertions.6.12.2.nupkg.sha512",
     "/home/jun_2/.nuget/packages/microsoft.codecoverage/17.11.1/microsoft.codecoverage.17.11.1.nupkg.sha512",
