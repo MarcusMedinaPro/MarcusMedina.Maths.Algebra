@@ -2,6 +2,7 @@ namespace MarcusMedina.Fluent.Maths.Algebra.Tests.Integration;
 
 using FluentAssertions;
 using MarcusMedina.Fluent.Maths.Algebra.Builders;
+using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 using MarcusMedina.Fluent.Maths.Algebra.Extensions;
 using Xunit;
 

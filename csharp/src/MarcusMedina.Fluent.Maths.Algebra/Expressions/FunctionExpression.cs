@@ -24,17 +24,37 @@ public sealed class FunctionExpression(string functionName, IAlgebraExpression a
     /// <param name="variables">Variable substitutions for evaluation.</param>
     /// <returns>The numeric result of the function applied to the argument.</returns>
     public double Evaluate(Dictionary<string, double>? variables = null)
-        => FunctionName.ToLower() switch
+    {
+        var argValue = Argument.Evaluate(variables);
+        return FunctionName.ToLower() switch
         {
-            "sin" => Math.Sin(Argument.Evaluate(variables)),
-            "cos" => Math.Cos(Argument.Evaluate(variables)),
-            "tan" => Math.Tan(Argument.Evaluate(variables)),
-            "sqrt" => Math.Sqrt(Argument.Evaluate(variables)),
-            "ln" => Math.Log(Argument.Evaluate(variables)),
-            "log" => Math.Log10(Argument.Evaluate(variables)),
-            "exp" => Math.Exp(Argument.Evaluate(variables)),
+            // Trigonometric functions
+            "sin" => Math.Sin(argValue),
+            "cos" => Math.Cos(argValue),
+            "tan" => Math.Tan(argValue),
+            "asin" => Math.Asin(argValue),
+            "acos" => Math.Acos(argValue),
+            "atan" => Math.Atan(argValue),
+
+            // Roots and exponentials
+            "sqrt" => Math.Sqrt(argValue),
+            "exp" => Math.Exp(argValue),
+
+            // Logarithms
+            "ln" => Math.Log(argValue),
+            "log" => Math.Log10(argValue),
+            "log10" => Math.Log10(argValue),
+
+            // Rounding
+            "floor" => Math.Floor(argValue),
+            "ceiling" => Math.Ceiling(argValue),
+
+            // Absolute value
+            "abs" => Math.Abs(argValue),
+
             _ => throw new NotImplementedException($"Function {FunctionName} not implemented")
         };
+    }
 
     /// <summary>
     /// Returns a string representation of the function expression, such as 'sin(x)'.
