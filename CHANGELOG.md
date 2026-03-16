@@ -25,9 +25,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `usecases/UseCase2.LaTeXGenerator/` - Mathematical expression to LaTeX conversion
   - `usecases/UseCase3.SymbolicCalculator/` - Interactive symbolic mathematics
 - Status badges in README (MIT License, .NET version, Build status, Test coverage, NuGet package)
+- **Mathematical Functions Extension (MathExtensions.cs)**:
+  - Trigonometric: `Sin()`, `Cos()`, `Tan()`, `ArcSin()`, `ArcCos()`, `ArcTan()`
+  - Exponential: `Sqrt()`, `Exp()`
+  - Logarithmic: `Log()`, `Log10()`
+  - Rounding: `Floor()`, `Ceiling()`
+  - Other: `AbsoluteValue()`
+  - All functions leverage .NET `Math` class for performance
+- **Expression Parser (AlgebraParser.cs)**:
+  - Parse string expressions: `"2*x^2 + 3*x + 1"`
+  - Support for `+`, `-`, `*`, `/`, `^` (power) operators
+  - Function calls: `sin(x)`, `sqrt(y)`, `log10(z)`
+  - Variable support with arbitrary names
+  - Parenthesized grouping with proper operator precedence
+  - Full mathematical expression evaluation from strings
 
 ### Fixed
 - Corrected test project reference path in solution file
+- Fixed namespace references in README and examples
+- Updated documentation to reflect actual API (removed non-existent `ToMathML()` method)
 - Added missing test project configuration in solution file
 - Improved project file organization and structure
 
