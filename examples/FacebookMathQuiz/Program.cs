@@ -1,8 +1,7 @@
 using MarcusMedina.Fluent.Maths.Algebra.Builders;
 using MarcusMedina.Fluent.Maths.Algebra.Extensions;
 
-// UTF-8 Encoding for console
-Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
 
 Console.WriteLine("════════════════════════════════════════════════════════════");
 Console.WriteLine("   📱 Facebook Math Quiz - The Ones That Break The Internet");

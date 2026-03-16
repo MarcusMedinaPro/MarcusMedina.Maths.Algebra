@@ -2,8 +2,7 @@
 using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 using MarcusMedina.Fluent.Maths.Algebra.Extensions;
 
-// UTF-8 Encoding for console
-Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
 
 Console.WriteLine("🧮 Fluent.Algebra - Basic Usage Examples\n");
 

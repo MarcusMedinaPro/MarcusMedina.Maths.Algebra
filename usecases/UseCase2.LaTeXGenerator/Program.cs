@@ -5,6 +5,8 @@ using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 // Problem: Generate publication-ready LaTeX notation from algebraic expressions
 // This demonstrates converting programmatic expressions to mathematical typesetting format
 
+Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
+
 Console.WriteLine("=== LaTeX Generator for Mathematical Expressions ===\n");
 
 // Example 1: Simple expression

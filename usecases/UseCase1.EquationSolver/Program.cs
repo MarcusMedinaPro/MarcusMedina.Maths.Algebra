@@ -4,6 +4,8 @@ using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 // Problem: Solve quadratic equations programmatically
 // This demonstrates building equations, evaluating them, and finding roots
 
+Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
+
 Console.WriteLine("=== Quadratic Equation Solver ===\n");
 
 // Build quadratic equation: ax² + bx + c = 0

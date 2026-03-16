@@ -3,7 +3,7 @@ using MarcusMedina.Fluent.Maths.Algebra.Extensions;
 using MarcusMedina.Fluent.Maths.Algebra.Expressions;
 using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 
-Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
 
 Console.WriteLine("🎓 How Fluent.Algebra Works - Under The Hood\n");
 Console.WriteLine("═══════════════════════════════════════════════════════════\n");

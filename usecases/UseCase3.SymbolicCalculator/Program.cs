@@ -5,6 +5,8 @@ using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
 // Problem: Interactive symbolic mathematics calculator
 // This demonstrates building a calculator that manipulates expressions symbolically
 
+Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
+
 Console.WriteLine("=== Symbolic Mathematics Calculator ===\n");
 
 // Create a calculator that tracks expressions and their properties
