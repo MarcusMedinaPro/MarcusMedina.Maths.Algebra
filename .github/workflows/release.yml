@@ -109,22 +109,29 @@ jobs:
           path: ./unsigned
 
       - name: Sign packages
-        shell: bash
+        shell: cmd
         run: |
-          for package in ./unsigned/*.nupkg; do
-            echo "Signing: $package"
-            dotnet nuget sign "$package" \
-              --certificate-store-name My \
-              --certificate-store-location CurrentUser \
-              --certificate-subject-name "Open Source Developer, Marcus Ackre Medina" \
+          for %%f in (./unsigned/*.nupkg) do (
+            echo Signing: %%f
+            dotnet nuget sign "./unsigned/%%f" ^
+              --certificate-store-name My ^
+              --certificate-store-location CurrentUser ^
+              --certificate-subject-name "Open Source Developer, Marcus Ackre Medina" ^
               --timestamper http://time.certum.pl
-          done
+          )
 
       - name: Verify signatures
+        shell: cmd
         run: |
-          for package in ./unsigned/*.nupkg; do
-            dotnet nuget verify "$package"
-          done
+          echo Verifying signatures...
+          for %%f in (./unsigned/*.nupkg) do (
+            echo Verifying: %%f
+            dotnet nuget verify "./unsigned/%%f"
+            if errorlevel 1 (
+              echo ERROR: Verification failed for %%f
+              exit /b 1
+            )
+          )
 
       - name: Generate SHA256 checksums
         run: |
