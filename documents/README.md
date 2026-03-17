@@ -2,7 +2,7 @@
 
 [![NuGet](https://img.shields.io/nuget/v/MarcusMedina.Fluent.Algebra.svg)](https://www.nuget.org/packages/MarcusMedina.Fluent.Algebra/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)](https://dotnet.microsoft.com/download)
+[![.NET](https://img.shields.io/badge/.NET-10.0-purple.svg)](https://dotnet.microsoft.com/download)
 
 **Fluent API for algebraic expressions, symbolic mathematics, and equation manipulation in C#**
 
