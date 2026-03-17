@@ -19,13 +19,13 @@ jobs:
         dotnet-version: '10.0.x'
     
     - name: Restore dependencies
-      run: dotnet restore csharp
+      run: dotnet restore csharp/MarcusMedina.Fluent.Maths.Algebra.slnx
     
     - name: Build
-      run: dotnet build csharp --configuration Release --no-restore
+      run: dotnet build csharp/MarcusMedina.Fluent.Maths.Algebra.slnx --configuration Release --no-restore
     
     - name: Run tests
-      run: dotnet test csharp --configuration Release --no-build --logger "trx;LogFileName=test-results.trx"
+      run: dotnet test csharp/MarcusMedina.Fluent.Maths.Algebra.slnx --configuration Release --no-build --logger "trx;LogFileName=test-results.trx"
     
     - name: Upload test results
       if: always()
