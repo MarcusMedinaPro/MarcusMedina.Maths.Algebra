@@ -134,10 +134,15 @@ jobs:
           )
 
       - name: Generate SHA256 checksums
+        shell: pwsh
         run: |
           cd unsigned
-          sha256sum *.nupkg > SHA256SUMS.txt
-          cat SHA256SUMS.txt
+          $files = Get-ChildItem *.nupkg
+          $files | ForEach-Object {
+            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash
+            "$hash  $($_.Name)"
+          } | Out-File SHA256SUMS.txt
+          Get-Content SHA256SUMS.txt
 
       - name: Upload signed packages
         uses: actions/upload-artifact@v4
