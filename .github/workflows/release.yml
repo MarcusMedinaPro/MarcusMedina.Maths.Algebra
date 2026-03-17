@@ -91,7 +91,7 @@ jobs:
 
   package-signing:
     needs: quality-gate
-    runs-on: [self-hosted, code-sign-runner]
+    runs-on: [self-hosted, LENOVOLEGION]
     name: 3️⃣ Package Signing
     steps:
       - name: Checkout
@@ -108,17 +108,15 @@ jobs:
           name: unsigned-packages
           path: ./unsigned
 
-      - name: Decode signing certificate
-        run: |
-          echo "${{ secrets.NUGET_SIGNING_CERT }}" | base64 --decode > cert.pfx
-
       - name: Sign packages
         run: |
           for package in ./unsigned/*.nupkg; do
+            echo "Signing: $package"
             dotnet nuget sign "$package" \
-              --certificate-path cert.pfx \
-              --certificate-password "${{ secrets.NUGET_SIGNING_CERT_PASSWORD }}" \
-              --timestamper http://timestamp.digicert.com
+              --certificate-store-name My \
+              --certificate-store-location CurrentUser \
+              --certificate-subject-name "Open Source Developer, Marcus Ackre Medina" \
+              --timestamper http://time.certum.pl
           done
 
       - name: Verify signatures
