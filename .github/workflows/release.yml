@@ -91,7 +91,7 @@ jobs:
 
   package-signing:
     needs: quality-gate
-    runs-on: [self-hosted, LENOVOLEGION]
+    runs-on: [self-hosted, Signer]
     name: 3️⃣ Package Signing
     steps:
       - name: Checkout
