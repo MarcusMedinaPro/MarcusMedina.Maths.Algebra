@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MarcusMedina.Fluent.Maths.Algebra.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f439ce6b120846d516dc3b784bee9d14457f97c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1327b552455891ae029a9de601b31483ed27d0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MarcusMedina.Fluent.Maths.Algebra.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MarcusMedina.Fluent.Maths.Algebra.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -683,5 +683,14 @@
             Example: "2*x^2 + 3*x + 1" or "sin(x) + cos(y)"
             </summary>
         </member>
+        <member name="M:MarcusMedina.Fluent.Maths.Algebra.Parsers.AlgebraParser.Parse(System.String)">
+            <summary>
+            Parses an algebraic expression string into an expression tree.
+            </summary>
+            <param name="expression">The expression string to parse, e.g. "2*x^2 + 3*x + 1".</param>
+            <returns>An <see cref="T:MarcusMedina.Fluent.Maths.Algebra.Interfaces.IAlgebraExpression"/> representing the parsed expression tree.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when <paramref name="expression"/> is null or whitespace.</exception>
+            <exception cref="T:System.InvalidOperationException">Thrown when the expression cannot be parsed.</exception>
+        </member>
     </members>
 </doc>

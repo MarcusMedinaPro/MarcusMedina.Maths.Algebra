@@ -155,6 +155,13 @@ public static class AlgebraParser
         }
     }
 
+    /// <summary>
+    /// Parses an algebraic expression string into an expression tree.
+    /// </summary>
+    /// <param name="expression">The expression string to parse, e.g. "2*x^2 + 3*x + 1".</param>
+    /// <returns>An <see cref="IAlgebraExpression"/> representing the parsed expression tree.</returns>
+    /// <exception cref="ArgumentException">Thrown when <paramref name="expression"/> is null or whitespace.</exception>
+    /// <exception cref="InvalidOperationException">Thrown when the expression cannot be parsed.</exception>
     public static IAlgebraExpression Parse(string expression)
     {
         if (string.IsNullOrWhiteSpace(expression))

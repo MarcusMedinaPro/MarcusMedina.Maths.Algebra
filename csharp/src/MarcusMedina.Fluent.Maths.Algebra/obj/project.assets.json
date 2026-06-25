@@ -8,24 +8,25 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/home/jun_2/.nuget/packages/": {}
+    "/home/marcus/.nuget/packages/": {}
   },
   "project": {
-    "version": "0.2.0",
+    "version": "0.3.1",
     "restore": {
-      "projectUniqueName": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
+      "projectUniqueName": "/home/marcus/git/MarcusMedinaPro/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
       "projectName": "MarcusMedina.Fluent.Maths.Algebra",
-      "projectPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
-      "packagesPath": "/home/jun_2/.nuget/packages/",
-      "outputPath": "/mnt/c/git/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/",
+      "projectPath": "/home/marcus/git/MarcusMedinaPro/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj",
+      "packagesPath": "/home/marcus/.nuget/packages/",
+      "outputPath": "/home/marcus/git/MarcusMedinaPro/Nugets/FluentBuilders.Maths.Algebra/csharp/src/MarcusMedina.Fluent.Maths.Algebra/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/jun_2/.nuget/NuGet/NuGet.Config"
+        "/home/marcus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/jun_2/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.109/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
