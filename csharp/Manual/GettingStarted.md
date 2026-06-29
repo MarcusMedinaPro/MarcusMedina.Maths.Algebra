@@ -9,19 +9,19 @@ Get up and running with MarcusMedina.Fluent.Algebra in 5 minutes.
 ### Via .NET CLI
 
 ```bash
-dotnet add package MarcusMedina.Fluent.Maths.Algebra
+dotnet add package MarcusMedina.Maths.Algebra
 ```
 
 ### Via Package Manager Console
 
 ```powershell
-Install-Package MarcusMedina.Fluent.Maths.Algebra
+Install-Package MarcusMedina.Maths.Algebra
 ```
 
 ### Via Visual Studio
 
 1. Right-click project → Manage NuGet Packages
-2. Search for `MarcusMedina.Fluent.Maths.Algebra`
+2. Search for `MarcusMedina.Maths.Algebra`
 3. Click Install
 
 **System Requirements:**

@@ -1,10 +1,10 @@
-# MarcusMedina.Fluent.Maths.Algebra
+# MarcusMedina.Maths.Algebra
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-10.0-purple.svg)](https://dotnet.microsoft.com/download)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/MarcusMedinaPro/NuGet/develop-quality.yml?branch=develop&label=Build)](https://github.com/MarcusMedinaPro/NuGet/actions)
 [![Test Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)](https://github.com/MarcusMedinaPro/NuGet)
-[![NuGet](https://img.shields.io/nuget/v/MarcusMedina.Fluent.Maths.Algebra.svg)](https://www.nuget.org/packages/MarcusMedina.Fluent.Maths.Algebra/)
+[![NuGet](https://img.shields.io/nuget/v/MarcusMedina.Maths.Algebra.svg)](https://www.nuget.org/packages/MarcusMedina.Maths.Algebra/)
 
 **Fluent API for algebraic expressions, symbolic mathematics, and equation manipulation in C#**
 
@@ -31,13 +31,13 @@ Build expression trees, evaluate symbolic math, and export to LaTeX - all with a
 ## 📦 Installation
 
 ```bash
-dotnet add package MarcusMedina.Fluent.Maths.Algebra
+dotnet add package MarcusMedina.Maths.Algebra
 ```
 
 Or via Package Manager Console:
 
 ```powershell
-Install-Package MarcusMedina.Fluent.Maths.Algebra
+Install-Package MarcusMedina.Maths.Algebra
 ```
 
 **Requirements:**
@@ -51,8 +51,8 @@ Install-Package MarcusMedina.Fluent.Maths.Algebra
 ### Basic Usage
 
 ```csharp
-using MarcusMedina.Fluent.Maths.Algebra.Builders;
-using MarcusMedina.Fluent.Maths.Algebra.Extensions;
+using MarcusMedina.Maths.Algebra.Builders;
+using MarcusMedina.Maths.Algebra.Extensions;
 
 // Create expression: (x + 2)^2 / 3
 var expr = Algebra.X

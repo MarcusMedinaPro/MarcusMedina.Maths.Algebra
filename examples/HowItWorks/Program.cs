@@ -1,7 +1,7 @@
-﻿using MarcusMedina.Fluent.Maths.Algebra.Builders;
-using MarcusMedina.Fluent.Maths.Algebra.Extensions;
-using MarcusMedina.Fluent.Maths.Algebra.Expressions;
-using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
+﻿using MarcusMedina.Maths.Algebra.Builders;
+using MarcusMedina.Maths.Algebra.Extensions;
+using MarcusMedina.Maths.Algebra.Expressions;
+using MarcusMedina.Maths.Algebra.Evaluators;
 
 Console.OutputEncoding = System.Text.Encoding.UTF8; // Enable emoji support
 

@@ -1,7 +1,0 @@
-<Solution>
-  <Project Path="../examples/BasicUsage/BasicUsage.csproj" />
-  <Project Path="../examples/FacebookMathQuiz/FacebookMathQuiz.csproj" />
-  <Project Path="../examples/HowItWorks/HowItWorks.csproj" />
-  <Project Path="src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj" />
-  <Project Path="tests/MarcusMedina.Fluent.Maths.Algebra.Tests/MarcusMedina.Fluent.Maths.Algebra.Tests.csproj" />
-</Solution>

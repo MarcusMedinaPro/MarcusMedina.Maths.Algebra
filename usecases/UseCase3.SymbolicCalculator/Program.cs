@@ -1,6 +1,6 @@
 using MarcusMedina.Fluent.Algebra;
-using MarcusMedina.Fluent.Maths.Algebra.Builders;
-using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
+using MarcusMedina.Maths.Algebra.Builders;
+using MarcusMedina.Maths.Algebra.Evaluators;
 
 // Problem: Interactive symbolic mathematics calculator
 // This demonstrates building a calculator that manipulates expressions symbolically

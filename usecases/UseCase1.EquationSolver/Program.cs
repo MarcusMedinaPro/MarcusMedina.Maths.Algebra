@@ -1,5 +1,5 @@
-using MarcusMedina.Fluent.Maths.Algebra.Builders;
-using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
+using MarcusMedina.Maths.Algebra.Builders;
+using MarcusMedina.Maths.Algebra.Evaluators;
 
 // Problem: Solve quadratic equations programmatically
 // This demonstrates building equations, evaluating them, and finding roots

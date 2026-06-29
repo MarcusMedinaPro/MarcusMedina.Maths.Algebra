@@ -53,7 +53,7 @@ If upgrading from v0.1.x:
 
 ```powershell
 # Update package
-dotnet package update MarcusMedina.Fluent.Maths.Algebra
+dotnet package update MarcusMedina.Maths.Algebra
 
 # Update your project file (if targeting <.NET 10.0)
 # Change: <TargetFramework>net9.0</TargetFramework>

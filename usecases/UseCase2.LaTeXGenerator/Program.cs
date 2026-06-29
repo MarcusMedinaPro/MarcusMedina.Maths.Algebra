@@ -1,6 +1,6 @@
 using MarcusMedina.Fluent.Algebra;
-using MarcusMedina.Fluent.Maths.Algebra.Builders;
-using MarcusMedina.Fluent.Maths.Algebra.Evaluators;
+using MarcusMedina.Maths.Algebra.Builders;
+using MarcusMedina.Maths.Algebra.Evaluators;
 
 // Problem: Generate publication-ready LaTeX notation from algebraic expressions
 // This demonstrates converting programmatic expressions to mathematical typesetting format

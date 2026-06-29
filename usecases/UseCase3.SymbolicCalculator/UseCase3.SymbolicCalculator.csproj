@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\csharp\src\MarcusMedina.Fluent.Maths.Algebra\MarcusMedina.Fluent.Maths.Algebra.csproj" />
+    <ProjectReference Include="..\..\csharp\src\MarcusMedina.Maths.Algebra\MarcusMedina.Maths.Algebra.csproj" />
   </ItemGroup>
 
 </Project>

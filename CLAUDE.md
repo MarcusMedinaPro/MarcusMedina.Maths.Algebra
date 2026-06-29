@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**MarcusMedina.Fluent.Maths.Algebra** - A C# NuGet package providing a fluent API for building algebraic expressions, symbolic mathematics, and equation manipulation.
+**MarcusMedina.Maths.Algebra** - A C# NuGet package providing a fluent API for building algebraic expressions, symbolic mathematics, and equation manipulation.
 
 - **Language:** C# 14.0
 - **Framework:** .NET 10.0+
@@ -24,7 +24,7 @@ dotnet build --configuration Release
 dotnet test --configuration Release
 
 # Pack NuGet package
-dotnet pack src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj --configuration Release
+dotnet pack src/MarcusMedina.Maths.Algebra/MarcusMedina.Maths.Algebra.csproj --configuration Release
 
 # Run single test
 dotnet test --filter ClassName.MethodName
@@ -92,14 +92,14 @@ var expr = AlgebraParser.Parse("sin(x) + sqrt(y)");
 ### File Structure
 ```
 csharp/
-├── src/MarcusMedina.Fluent.Maths.Algebra/
+├── src/MarcusMedina.Maths.Algebra/
 │   ├── Builders/              # Fluent builder implementation
 │   ├── Expressions/           # Core expression classes
 │   ├── Extensions/            # Extension methods
 │   ├── Interfaces/            # IAlgebraExpression contract
 │   ├── Parsers/               # String expression parser
 │   └── GlobalUsings.cs        # Global namespace imports
-└── tests/MarcusMedina.Fluent.Maths.Algebra.Tests/
+└── tests/MarcusMedina.Maths.Algebra.Tests/
     └── *Tests.cs              # xUnit test suite
 ```
 
@@ -164,7 +164,7 @@ Parser supports:
 
 Key settings in `.csproj`:
 - **Version:** Bumped via git tags in CI
-- **Package ID:** `MarcusMedina.Fluent.Maths.Algebra`
+- **Package ID:** `MarcusMedina.Maths.Algebra`
 - **Description:** Fluent API for algebraic expressions
 - **License:** MIT (requires LICENSE file in root)
 - **Repository:** GitHub repository URL
@@ -180,7 +180,7 @@ Key settings in `.csproj`:
 ## Common Issues & Solutions
 
 **Build Fails on Test Project:**
-- Verify path in test .csproj: `../../src/MarcusMedina.Fluent.Maths.Algebra/MarcusMedina.Fluent.Maths.Algebra.csproj`
+- Verify path in test .csproj: `../../src/MarcusMedina.Maths.Algebra/MarcusMedina.Maths.Algebra.csproj`
 
 **Parser Not Working:**
 - Ensure `AlgebraParser` is in global usings
