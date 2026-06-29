@@ -5,6 +5,7 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/MarcusMedinaPro/NuGet/develop-quality.yml?branch=develop&label=Build)](https://github.com/MarcusMedinaPro/NuGet/actions)
 [![Test Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)](https://github.com/MarcusMedinaPro/NuGet)
 [![NuGet](https://img.shields.io/nuget/v/MarcusMedina.Maths.Algebra.svg)](https://www.nuget.org/packages/MarcusMedina.Maths.Algebra/)
+[![Signed](https://img.shields.io/badge/Signed-Sigstore-green?style=for-the-badge&logo=linux)](https://docs.sigstore.dev)
 
 **Fluent API for algebraic expressions, symbolic mathematics, and equation manipulation in C#**
 
@@ -193,4 +194,4 @@ Contributions are welcome! Please:
 - [MarcusMedina.Units.Math](https://github.com/MarcusMedinaPro/MarcusMedina.Units.Math) — Unit-aware mathematical operations
 - [MarcusMedina.Units.Distance](https://github.com/MarcusMedinaPro/MarcusMedina.Units.Distance) — Distance unit conversions
 - [MarcusMedina.Fluent.Data](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data) — CSV, JSON, XML extensions
-- [MarcusMedina.Fluent.Data.Sql](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data.Sql) — SQL-style pattern matching
+- [MarcusMedina.Fluent.Data.Sql](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data.Sql) — SQL-style pattern matching
