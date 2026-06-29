@@ -115,22 +115,29 @@ csharp/
   - Parser functionality and edge cases
   - Simplification rules
 
-## GitHub Actions Workflow
+## GitHub Actions Workflows
+
+**Auto-Tag** (`.github/workflows/auto-tag.yml`)
+Triggers on: push to `main` with `.csproj` changes or manual `workflow_dispatch`.
+Läser `<Version>` från csproj, skapar `v{version}`-tag, triggar release-pipelinen.
+Kräver secret: `WORKFLOW_PAT` (PAT med `contents:write` + `actions:write`)
 
 **Release Pipeline** (`.github/workflows/release.yml`)
-
 Triggers on: `git push` with `v*` tags or to `main`/`release` branches
 
 4-stage pipeline:
 1. **Build & Test** - Restore, build, test, pack (produces unsigned packages)
 2. **Quality Gate** - CodeQL analysis, vulnerability scanning
-3. **Package Signing** - Sign packages, verify signatures, generate SHA256 checksums
+3. **Package Signing** - cosign/Sigstore keyless signing + SHA256 checksums
 4. **Publish to NuGet** - Only runs on version tags (refs/tags/v*)
 
 **Required Secrets:**
+- `WORKFLOW_PAT` - PAT med `contents:write` + `actions:write` (för auto-tag)
 - `NUGET_API_KEY` - NuGet.org API key
-- `NUGET_SIGNING_CERT` - Base64-encoded signing certificate (.pfx)
-- `NUGET_SIGNING_CERT_PASSWORD` - Certificate password
+
+**Övriga workflows:**
+- `develop.yml` — Unit tests vid push/PR till `develop`
+- `test.yml` — Build + Test + CodeQL + sårbarhetsscan vid push/PR till `test`
 
 ## Important Implementation Details
 
