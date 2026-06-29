@@ -21,6 +21,7 @@
     <RepositoryUrl>https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>algebra;math;symbolic;fluent;expressions;equations</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <CollectCoverage>true</CollectCoverage>
     <CoverageFormat>cobertura</CoverageFormat>
