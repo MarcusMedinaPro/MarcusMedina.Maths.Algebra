@@ -1,14 +1,12 @@
-name: 🚀 Release - Full Pipeline
+name: 🚀 Release — Full Pipeline
 
 on:
   push:
     tags: ["v*"]
-    branches: [release, main]
 
 permissions:
   contents: write
   security-events: write
-  packages: write
   id-token: write
 
 jobs:
@@ -17,10 +15,10 @@ jobs:
     name: 1️⃣ Build & Test
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 10.0.x
 
@@ -37,13 +35,13 @@ jobs:
         run: dotnet pack csharp/src/MarcusMedina.Maths.Algebra/MarcusMedina.Maths.Algebra.csproj --configuration Release --no-build --output ./nupkgs
 
       - name: Upload unsigned packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: unsigned-packages
           path: ./nupkgs/*.nupkg
 
       - name: Upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: test-results
@@ -55,10 +53,10 @@ jobs:
     name: 2️⃣ Code Quality
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 10.0.x
 
@@ -83,7 +81,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload quality reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: quality-reports
@@ -91,86 +89,59 @@ jobs:
 
   package-signing:
     needs: quality-gate
-    runs-on: [self-hosted, Signer]
-    name: 3️⃣ Package Signing
+    runs-on: ubuntu-latest
+    name: 3️⃣ Package Signing (cosign/Sigstore)
+    permissions:
+      id-token: write
+      contents: read
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 10.0.x
-
       - name: Download unsigned packages
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: unsigned-packages
           path: ./unsigned
 
-      - name: Sign packages
-        shell: cmd
-        run: |
-          for %%f in (./unsigned/*.nupkg) do (
-            echo Signing: %%f
-            dotnet nuget sign "./unsigned/%%f" ^
-              --certificate-store-name My ^
-              --certificate-store-location CurrentUser ^
-              --certificate-subject-name "Open Source Developer, Marcus Ackre Medina" ^
-              --timestamper http://time.certum.pl
-          )
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
 
-      - name: Verify signatures
-        shell: cmd
+      - name: Sign packages
         run: |
-          echo Verifying signatures...
-          for %%f in (./unsigned/*.nupkg) do (
-            echo Verifying: %%f
-            dotnet nuget verify "./unsigned/%%f"
-            if errorlevel 1 (
-              echo ERROR: Verification failed for %%f
-              exit /b 1
-            )
-          )
+          for pkg in ./unsigned/*.nupkg; do
+            cosign sign-blob "$pkg" \
+              --bundle "${pkg}.sigstore.json" \
+              --yes
+          done
 
       - name: Generate SHA256 checksums
-        shell: pwsh
         run: |
           cd unsigned
-          $files = Get-ChildItem *.nupkg
-          $files | ForEach-Object {
-            $hash = (Get-FileHash $_.FullName -Algorithm SHA256).Hash
-            "$hash  $($_.Name)"
-          } | Out-File SHA256SUMS.txt
-          Get-Content SHA256SUMS.txt
+          sha256sum *.nupkg > SHA256SUMS.txt
+          cat SHA256SUMS.txt
 
-      - name: Upload signed packages
-        uses: actions/upload-artifact@v4
+      - name: Upload signed packages + signatures
+        uses: actions/upload-artifact@v5
         with:
           name: signed-packages
           path: |
             ./unsigned/*.nupkg
+            ./unsigned/*.sigstore.json
             ./unsigned/SHA256SUMS.txt
 
   publish-nuget:
     needs: package-signing
     runs-on: ubuntu-latest
     name: 4️⃣ Publish to NuGet.org
-    if: startsWith(github.ref, 'refs/tags/v')
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 10.0.x
-
       - name: Download signed packages
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: signed-packages
           path: ./packages
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
 
       - name: Publish to NuGet.org
         run: |
@@ -184,6 +155,7 @@ jobs:
         with:
           files: |
             ./packages/*.nupkg
+            ./packages/*.sigstore.json
             ./packages/SHA256SUMS.txt
           generate_release_notes: true
           draft: false

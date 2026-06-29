@@ -152,6 +152,23 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
+## 🔐 Package Integrity
+
+All releases are signed with [cosign](https://docs.sigstore.dev) (Sigstore keyless signing).
+
+To verify a downloaded package:
+
+```bash
+cosign verify-blob <package.nupkg> \
+  --bundle <package.nupkg.sigstore.json> \
+  --certificate-identity-regexp "https://github.com/MarcusMedinaPro/.*/release.yml" \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com
+```
+
+The `.sigstore.json` bundle is available in each [GitHub Release](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/releases).
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please:
@@ -173,5 +190,7 @@ Contributions are welcome! Please:
 
 ## 📚 Related Projects
 
-- [FluentBuilders.Units.Math](../FluentBuilders.Units.Math/) - Unit-aware mathematical operations
-- [FluentBuilders.Maths.Calculus](../FluentBuilders.Maths.Calculus/) - Symbolic calculus (coming soon)
+- [MarcusMedina.Units.Math](https://github.com/MarcusMedinaPro/MarcusMedina.Units.Math) — Unit-aware mathematical operations
+- [MarcusMedina.Units.Distance](https://github.com/MarcusMedinaPro/MarcusMedina.Units.Distance) — Distance unit conversions
+- [MarcusMedina.Fluent.Data](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data) — CSV, JSON, XML extensions
+- [MarcusMedina.Fluent.Data.Sql](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data.Sql) — SQL-style pattern matching
