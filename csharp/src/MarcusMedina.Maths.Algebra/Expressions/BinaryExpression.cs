@@ -7,6 +7,7 @@ using MarcusMedina.Maths.Algebra.Interfaces;
 /// </summary>
 public sealed class BinaryExpression : IAlgebraExpression
 {
+    private const double Epsilon = 1e-10;
     /// <summary>
     /// Gets the left operand of the binary operation.
     /// </summary>
@@ -41,7 +42,7 @@ public sealed class BinaryExpression : IAlgebraExpression
             BinaryOperator.Add => leftVal + rightVal,
             BinaryOperator.Subtract => leftVal - rightVal,
             BinaryOperator.Multiply => leftVal * rightVal,
-            BinaryOperator.Divide => rightVal != 0 ? leftVal / rightVal : throw new DivideByZeroException(),
+            BinaryOperator.Divide => Math.Abs(rightVal) >= Epsilon ? leftVal / rightVal : throw new DivideByZeroException(),
             BinaryOperator.Power => Math.Pow(leftVal, rightVal),
             _ => throw new NotImplementedException($"Operator {Operator} not implemented")
         };
@@ -112,17 +113,17 @@ public sealed class BinaryExpression : IAlgebraExpression
         // Identity rules
         if (right is ConstantExpression rightC)
         {
-            if (Operator == BinaryOperator.Add && rightC.Value == 0)
+            if (Operator == BinaryOperator.Add && Math.Abs(rightC.Value) < Epsilon)
             {
                 return left;
             }
 
-            if (Operator == BinaryOperator.Multiply && rightC.Value == 1)
+            if (Operator == BinaryOperator.Multiply && Math.Abs(rightC.Value - 1.0) < Epsilon)
             {
                 return left;
             }
 
-            if (Operator == BinaryOperator.Multiply && rightC.Value == 0)
+            if (Operator == BinaryOperator.Multiply && Math.Abs(rightC.Value) < Epsilon)
             {
                 return new ConstantExpression(0);
             }
@@ -130,17 +131,17 @@ public sealed class BinaryExpression : IAlgebraExpression
 
         if (left is ConstantExpression leftC)
         {
-            if (Operator == BinaryOperator.Add && leftC.Value == 0)
+            if (Operator == BinaryOperator.Add && Math.Abs(leftC.Value) < Epsilon)
             {
                 return right;
             }
 
-            if (Operator == BinaryOperator.Multiply && leftC.Value == 1)
+            if (Operator == BinaryOperator.Multiply && Math.Abs(leftC.Value - 1.0) < Epsilon)
             {
                 return right;
             }
 
-            if (Operator == BinaryOperator.Multiply && leftC.Value == 0)
+            if (Operator == BinaryOperator.Multiply && Math.Abs(leftC.Value) < Epsilon)
             {
                 return new ConstantExpression(0);
             }
