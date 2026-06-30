@@ -130,15 +130,10 @@ public static class AlgebraParser
 
         private bool MatchOperator(params string[] ops)
         {
-            foreach (var op in ops)
-            {
-                if (CheckValue(op))
-                {
-                    Advance();
-                    return true;
-                }
-            }
-            return false;
+            if (!ops.Any(CheckValue))
+                return false;
+            Advance();
+            return true;
         }
 
         private bool CheckValue(string value) => !IsAtEnd() && Peek().Value == value;
@@ -179,18 +174,13 @@ public static class AlgebraParser
 
         while (i < input.Length)
         {
-            var matched = false;
-            foreach (var f in funcs)
+            var matchedFunc = funcs.FirstOrDefault(f => input[i..].StartsWith(f, StringComparison.OrdinalIgnoreCase));
+            if (matchedFunc != null)
             {
-                if (input.Substring(i).StartsWith(f, StringComparison.OrdinalIgnoreCase))
-                {
-                    tokens.Add(new Token { Type = Token.TokenType.Function, Value = f.ToLower() });
-                    i += f.Length;
-                    matched = true;
-                    break;
-                }
+                tokens.Add(new Token { Type = Token.TokenType.Function, Value = matchedFunc.ToLower() });
+                i += matchedFunc.Length;
+                continue;
             }
-            if (matched) continue;
 
             var ch = input[i];
             if (char.IsDigit(ch) || (ch == '.' && i + 1 < input.Length && char.IsDigit(input[i + 1])))
