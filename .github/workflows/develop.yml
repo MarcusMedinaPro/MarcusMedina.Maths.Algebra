@@ -1,10 +1,12 @@
+# Unit tests på feature- och develop-grenar — snabb feedback, ingen signering.
+
 name: 🧪 Develop — Unit Tests
 
 on:
   push:
-    branches: [develop]
+    branches: [develop, "feature/**"]
   pull_request:
-    branches: [develop]
+    branches: [develop, "feature/**"]
   workflow_dispatch:
 
 permissions:

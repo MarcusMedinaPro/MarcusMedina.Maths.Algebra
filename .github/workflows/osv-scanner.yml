@@ -13,13 +13,13 @@ name: OSV-Scanner
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: [test]
   merge_group:
-    branches: [ "main" ]
+    branches: [test]
   schedule:
-    - cron: '45 5 * * 6'
+    - cron: '45 5 * * 6'    # Veckoscan mot main
   push:
-    branches: [ "main" ]
+    branches: [test]
 
 permissions:
   security-events: write
