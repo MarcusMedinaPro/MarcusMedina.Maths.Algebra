@@ -1,5 +1,8 @@
 # CI Workflow Template
 # Använd för NuGet-paket med .NET 10+
+# Säkerhetsscanningar hanteras av separata workflows:
+#   security-code-scan.yml — C# SAST (SecurityCodeScan)
+#   osv-scanner.yml        — dependency vulnerabilities (Google OSV)
 
 name: CI
 
@@ -12,7 +15,6 @@ on:
 
 permissions:
   contents: read
-  security-events: write
 
 env:
   DOTNET_VERSION: '10.0.x'
@@ -80,55 +82,6 @@ jobs:
       - name: Restore & Test
         run: dotnet test --configuration Release
         working-directory: ./csharp
-
-  security-code-scan:
-    name: SecurityCodeScan (C# SAST)
-    runs-on: ubuntu-latest
-    needs: build-and-test
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
-
-      - name: SecurityCodeScan
-        uses: security-code-scan/security-code-scan-github-action@v1
-        continue-on-error: true
-
-      - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v4
-        if: always()
-        with:
-          sarif_file: ./security-scan.sarif
-
-  osv-scan:
-    name: OSV Scanner (Dependencies)
-    runs-on: ubuntu-latest
-    needs: build-and-test
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: OSV Scanner
-        uses: google/osv-scanner-action@v2
-        with:
-          scan-args: |-
-            --recursive
-            --format=sarif
-            --output=osv-results.sarif
-            ./csharp
-        continue-on-error: true
-
-      - name: Upload SARIF
-        uses: github/codeql-action/upload-sarif@v4
-        if: always()
-        with:
-          sarif_file: osv-results.sarif
 
   pack:
     name: Build NuGet Package
