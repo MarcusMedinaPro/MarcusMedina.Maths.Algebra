@@ -18,6 +18,7 @@ on:
     branches: [test]
   schedule:
     - cron: '45 5 * * 6'    # Veckoscan mot main
+  workflow_dispatch:
   push:
     branches: [test]
 
