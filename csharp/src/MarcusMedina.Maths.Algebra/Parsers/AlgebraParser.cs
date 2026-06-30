@@ -138,7 +138,7 @@ public static class AlgebraParser
 
         private bool CheckValue(string value) => !IsAtEnd() && Peek().Value == value;
         private bool CheckType(Token.TokenType type) => !IsAtEnd() && Peek().Type == type;
-        private Token Advance() { if (!IsAtEnd()) _current++; return Previous(); }
+        private Token Advance() { if (!IsAtEnd()) { _current++; } return Previous(); }
         private bool IsAtEnd() => Peek().Type == Token.TokenType.End;
         private Token Peek() => _current < _tokens.Count ? _tokens[_current] : new Token { Type = Token.TokenType.End };
         private Token Previous() => _tokens[_current - 1];
