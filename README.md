@@ -13,7 +13,9 @@
 
 Build expression trees, evaluate symbolic math, and export to LaTeX - all with a clean, fluent interface designed for both education and production use.
 
-> **Story:** _TODO — ask Marcus for the real background behind this package._
+> In 2016, working as a study supervisor for upper-secondary (gymnasium) students, I had to explain the thinking behind their algebra assignments — or break the problems down into small enough pieces that they'd click. It was more than a little dismaying how much I'd forgotten since my own gymnasium days, and it got me thinking about how you'd actually explain algebra step by step as code. It took until 2022 for that thought to turn into action: I was hunting through an old gymnasium textbook for simple calculation exercises to use in a first C# course, and that's where the idea of algebra-as-code finally clicked.
+>
+> In this case, I wanted the code itself to read like the explanation I'd give a student out loud, step by step, not just spit out a final answer.
 
 ---
 
