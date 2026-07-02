@@ -1,15 +1,19 @@
 # MarcusMedina.Maths.Algebra
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![.NET](https://img.shields.io/badge/.NET-10.0-purple.svg)](https://dotnet.microsoft.com/download)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/MarcusMedinaPro/NuGet/develop-quality.yml?branch=develop&label=Build)](https://github.com/MarcusMedinaPro/NuGet/actions)
-[![Test Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen)](https://github.com/MarcusMedinaPro/NuGet)
-[![NuGet](https://img.shields.io/nuget/v/MarcusMedina.Maths.Algebra.svg)](https://www.nuget.org/packages/MarcusMedina.Maths.Algebra/)
+[![NuGet](https://img.shields.io/nuget/v/MarcusMedina.Maths.Algebra.svg?style=for-the-badge&logo=nuget)](https://www.nuget.org/packages/MarcusMedina.Maths.Algebra/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/MarcusMedina.Maths.Algebra.svg?style=for-the-badge&logo=nuget)](https://www.nuget.org/packages/MarcusMedina.Maths.Algebra/)
+[![C#](https://img.shields.io/badge/C%23-14.0-239120?style=for-the-badge&logo=csharp&logoColor=white)](#)
+[![.NET](https://img.shields.io/badge/.NET-10.0+-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Open Source](https://raw.githubusercontent.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/main/assets/open-source.svg)](https://opensource.org)
+[![Build](https://img.shields.io/github/actions/workflow/status/MarcusMedinaPro/MarcusMedina.Maths.Algebra/release.yml?branch=main&label=Build&style=for-the-badge&logo=github)](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/actions)
 [![Signed](https://img.shields.io/badge/Signed-Sigstore-green?style=for-the-badge&logo=linux)](https://docs.sigstore.dev)
 
 **Fluent API for algebraic expressions, symbolic mathematics, and equation manipulation in C#**
 
 Build expression trees, evaluate symbolic math, and export to LaTeX - all with a clean, fluent interface designed for both education and production use.
+
+> **Story:** _TODO — ask Marcus for the real background behind this package._
 
 ---
 
@@ -83,10 +87,10 @@ double result = expr.Evaluate(vars);  // 2*3 + 5 = 11
 
 ## 📖 Documentation
 
-- **[Getting Started](./csharp/Manual/GettingStarted.md)** - Installation and setup guide
-- **[Manual](./csharp/Manual/README.md)** - Comprehensive documentation
-- **[Examples](./csharp/Manual/Examples/)** - Detailed usage examples
-- **[API Reference](./csharp/Manual/API.md)** - Complete API documentation
+- **[Getting Started](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/blob/main/csharp/Manual/GettingStarted.md)** - Installation and setup guide
+- **[Manual](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/blob/main/csharp/Manual/README.md)** - Comprehensive documentation
+- **[Examples](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/tree/main/csharp/Manual/Examples/)** - Detailed usage examples
+- **[API Reference](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/blob/main/csharp/Manual/API.md)** - Complete API documentation
 
 ---
 
@@ -94,9 +98,9 @@ double result = expr.Evaluate(vars);  // 2*3 + 5 = 11
 
 This library solves real-world problems in mathematics and education:
 
-1. **[Equation Solver](./usecases/UseCase1.EquationSolver/)** - Programmatically build and solve algebraic equations
-2. **[LaTeX Generator](./usecases/UseCase2.LaTeXGenerator/)** - Convert mathematical expressions to publication-ready notation
-3. **[Symbolic Calculator](./usecases/UseCase3.SymbolicCalculator/)** - Interactive symbolic mathematics with variable substitution
+1. **[Equation Solver](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/tree/main/usecases/UseCase1.EquationSolver/)** - Programmatically build and solve algebraic equations
+2. **[LaTeX Generator](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/tree/main/usecases/UseCase2.LaTeXGenerator/)** - Convert mathematical expressions to publication-ready notation
+3. **[Symbolic Calculator](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/tree/main/usecases/UseCase3.SymbolicCalculator/)** - Interactive symbolic mathematics with variable substitution
 
 Each use case includes a working example and demonstrates how to integrate this library.
 
@@ -149,7 +153,7 @@ dotnet test --configuration Release
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/blob/main/LICENSE) file for details.
 
 ---
 
@@ -194,4 +198,4 @@ Contributions are welcome! Please:
 - [MarcusMedina.Units.Math](https://github.com/MarcusMedinaPro/MarcusMedina.Units.Math) — Unit-aware mathematical operations
 - [MarcusMedina.Units.Distance](https://github.com/MarcusMedinaPro/MarcusMedina.Units.Distance) — Distance unit conversions
 - [MarcusMedina.Fluent.Data](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data) — CSV, JSON, XML extensions
-- [MarcusMedina.Fluent.Data.Sql](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data.Sql) — SQL-style pattern matching
+- [MarcusMedina.Fluent.Data.Sql](https://github.com/MarcusMedinaPro/MarcusMedina.Fluent.Data.Sql) — SQL-style pattern matching
