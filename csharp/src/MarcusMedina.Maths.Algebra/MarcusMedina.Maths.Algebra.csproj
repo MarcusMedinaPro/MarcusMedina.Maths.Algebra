@@ -10,14 +10,14 @@
 
     <!-- NuGet Package Metadata -->
     <PackageId>MarcusMedina.Maths.Algebra</PackageId>
-    <Version>0.3.2</Version>
+    <Version>0.3.3</Version>
     <Authors>Marcus Medina</Authors>
     <Company>MarcusMedina</Company>
     <Product>FluentBuilders</Product>
     <Description>Fluent API for algebraic expressions, symbolic math, and equation solving in C#</Description>
     <Copyright>Copyright © Marcus Medina 2019-2025</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/wiki</PackageProjectUrl>
     <RepositoryUrl>https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>algebra;math;symbolic;fluent;expressions;equations</PackageTags>
