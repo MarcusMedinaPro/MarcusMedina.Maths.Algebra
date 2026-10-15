@@ -8,6 +8,7 @@
 [![Open Source](https://raw.githubusercontent.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/main/assets/open-source.svg)](https://opensource.org)
 [![Build](https://img.shields.io/github/actions/workflow/status/MarcusMedinaPro/MarcusMedina.Maths.Algebra/release.yml?branch=main&label=Build&style=for-the-badge&logo=github)](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/actions)
 [![Signed](https://img.shields.io/badge/Signed-Sigstore-green?style=for-the-badge&logo=linux)](https://docs.sigstore.dev)
+[![Wiki](https://img.shields.io/badge/docs-wiki-blue?style=for-the-badge&logo=github)](https://github.com/MarcusMedinaPro/MarcusMedina.Maths.Algebra/wiki)
 
 **Fluent API for algebraic expressions, symbolic mathematics, and equation manipulation in C#**
 
