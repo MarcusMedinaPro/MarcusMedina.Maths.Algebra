@@ -10,7 +10,7 @@
 
     <!-- NuGet Package Metadata -->
     <PackageId>MarcusMedina.Maths.Algebra</PackageId>
-    <Version>0.3.3</Version>
+    <Version>0.3.4</Version>
     <Authors>Marcus Medina</Authors>
     <Company>MarcusMedina</Company>
     <Product>FluentBuilders</Product>
