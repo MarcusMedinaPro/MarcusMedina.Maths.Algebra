@@ -39,7 +39,7 @@ Install-Package MarcusMedina.Fluent.Algebra
 ```
 
 **Requirements:**
-- .NET 9.0 or later
+- .NET 10.0 or later
 - C# 13.0 or later
 
 ---

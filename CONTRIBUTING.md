@@ -30,7 +30,7 @@ Console.WriteLine(simplified); // Still shows (x / 1)
 
 **Expected**: Should simplify to `x`
 **Actual**: Returns `(x / 1)`
-**Environment**: .NET 9.0, Windows 11
+**Environment**: .NET 10.0, Windows 11
 ```
 
 ### Suggesting Enhancements
@@ -60,7 +60,7 @@ Enhancement suggestions are welcome! Please include:
 ### C# Style Guide
 
 - **Language Version**: C# 13.0
-- **Target Framework**: .NET 9.0
+- **Target Framework**: .NET 10.0
 - **Nullable References**: Enabled
 - **File-scoped Namespaces**: Preferred
 - **Primary Constructors**: Use where appropriate
